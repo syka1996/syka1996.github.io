@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    margin-top: 30px;
+    background-color: beige;
+}
+
+h2 {
+    font-size: 1.2em;
+}
