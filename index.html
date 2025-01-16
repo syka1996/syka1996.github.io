@@ -28,6 +28,30 @@
 
     <form><input type="button" value="日時表示" onClick="message()"></form>
     <span id="view_time"></span>
+    <head> <!--頭-->
+    <meta charset="UTF-8">
+    <title>酒沼</title> <!--検索のタイトル-->
+    <link rel="stylesheet" href="styles.css"> <!--そのページ」と「外部のファイルやページ」を関連づける-->
+</head>
+
+<body>
+    <h1 style="background-color: rgb(133, 133, 143);text-align:center;">おうちdeカクテル</h>
+    <hr> <!--横線-->
+    <div>
+        <p id="change_text">合わせてみよう</p>
+        <button onclick="osake()">お酒</button>
+        <button onclick="jusu()">飲み物</button>
+    </div>
+<p id="demo2">案山子
+<button type="button" onclick='document.getElementById("demo2").innerHTML = "不正解"'>選ぶ</button>
+
+<p id="demo">ｼｬﾝﾃﾞｨｰｶﾞﾌ
+<button type="button" onclick='document.getElementById("demo").innerHTML = "正解"'>選ぶ</button>
+
+<p id="demo3">梅酒
+<button type="button" onclick='document.getElementById("demo3").innerHTML = "不正解"'>選ぶ</button>
+</p>
+
 </body>
 
 </html>
