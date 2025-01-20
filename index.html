@@ -45,7 +45,54 @@
 <p id="demo3">梅酒
 <button type="button" onclick='document.getElementById("demo3").innerHTML = "不正解"'>選ぶ</button>
 </p>
+    
+    <meta charset="UTF-8">
 
+    <title>カクテルクイズ</title>
+    <div id="unk1">
+        <p>レッド・アイ</p>
+        ビールと合わせるのは・・・
+        <p id="uk1">
+        <button type="button" onclick='document.getElementById("uk1").innerHTML = "正解"'>トマトジュース</button>
+        <button type="button" onclick='document.getElementById("uk1").innerHTML = "不正解"'>レモンジュース</button>
+        <button type="button" onclick='document.getElementById("uk1").innerHTML = "不正解"'>オレンジジュース</button>
+        <p>
+        <button type="button" onclick ='nextQuestion("unk2")'>次へ</button>
+    </div>
+
+    <div id="unk2" style="display:none;">
+        <p>ダーク＆ストーミー</p>
+        ラム酒と合わせるのは・・・
+        <p id="uk2">
+        <button type="button" onclick='document.getElementById("uk2").innerHTML = "正解"'>コーラ</button>
+        <button type="button" onclick='document.getElementById("uk2").innerHTML = "不正解"'>トマトジュース</button>
+        <button type="button" onclick='document.getElementById("uk2").innerHTML = "不正解"'>ジンジャービール</button>
+        <p>
+        <button type="button" onclick='nextQuestion2("unk3")'>次へ</button>
+    </div>
+
+    <div id="unk3" style="display:none;">
+        <p>ジン・リッキー</p>
+        ジンと合わせるのは・・・
+        <p id="uk3">
+        <button type="button" onclick='document.getElementById("uk3").innerHTML = "正解"'>トニックウォーター</button>
+        <button type="button" onclick='document.getElementById("uk3").innerHTML = "不正解"'>ビール</button>
+        <button type="button" onclick='document.getElementById("uk3").innerHTML = "不正解"'>ソーダ</button>
+        <p>
+        <button type="button" onclick='nextQuestion3("unk4")'>次へ</button>
+    </div>
+
+    <div id="unk4" style="display:none;">
+        <p>緑茶ハイ</p>
+        緑茶と混ぜるのは・・・
+        <p id="uk4">
+        <button type="button" onclick='document.getElementById("uk4").innerHTML = "正解"'>ハイボール</button>
+        <button type="button" onclick='document.getElementById("uk4").innerHTML = "不正解"'>甲類焼酎</button>
+        <button type="button" onclick='document.getElementById("uk4").innerHTML = "不正解"'>テンション</button>
+        <p>終了</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
