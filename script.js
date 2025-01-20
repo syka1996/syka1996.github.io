@@ -35,3 +35,28 @@ function ans() {
     let text = document.getElementById(e.target.id);
     text.getAttribute("ans") =="True"
 }
+
+function nextQuestion(nextId) {
+    const currentDiv = document.querySelector('div:not([style*="display:none"])');
+    if (currentDiv) {
+        currentDiv.style.display = 'none';
+    }
+    document.getElementById(nextId).style.display = 'block';
+}
+
+
+function nextQuestion2(nextId) {
+    const currentDiv = document.querySelector('div:not([style*="display:none"])');
+    if (currentDiv) {
+        currentDiv.style.display = 'none';
+    }
+    document.getElementById(nextId).style.display = 'block';
+}
+
+function nextQuestion3(nextId) {
+    const currentDiv = document.querySelector('div:not([style*="display:none"])');
+    if (currentDiv) {
+        currentDiv.style.display = 'none';
+    }
+    document.getElementById(nextId).style.display = 'block';
+}
