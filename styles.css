@@ -4,7 +4,12 @@ body {
     background-color: blanchedalmond;
     font-size:1.2em
 }
-
+body2 {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: blanchedalmond;
+    font-size:1.2em
+}
 img {
     width: 200px;
     height: 200px;
