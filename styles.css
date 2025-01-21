@@ -30,7 +30,11 @@ h2 {
 }
 body {
     font-family: 'Arial', sans-serif;
-    font-size:1em;
+    font-size:1.2em;
+}
+body1 {
+    font-family: 'Arial', sans-serif;
+    font-size:1.2em;
 }
 
 button {
