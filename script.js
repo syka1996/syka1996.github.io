@@ -1,62 +1,68 @@
-function messagee() {
-    document.getElementById("view_time").innerHTML = getNow();
-}
-
-function getNow() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var mon = now.getMonth() + 1; //１を足すこと
-    var day = now.getDate();
-    var hour = now.getHours();
-    var min = now.getMinutes();
-    var sec = now.getSeconds();
-
-    //出力用
-    var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
-    return s;
-}
-function osake() {
-    document.getElementById("change_text").textContent = "スーパードライ";
-    document.getElementById("change_text").style.color = "black";
-}
-
-function jusu() {
-    document.getElementById("change_text").textContent = "ジンジャーエール";
-    document.getElementById("change_text").style.color = "black";
-}
-
-function cocktail() {
-    const greetings = ['案山子', 'カルアミルク', 'ジンフィズ', 'シャンディーガフ', 'モスコミュール'];
-    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-    document.getElementById('greeting_text').textContent = randomGreeting;
-}
-
-function ans() {
-    let text = document.getElementById(e.target.id);
-    text.getAttribute("ans") =="True"
-}
-
-function nextQuestion(nextId) {
-    const currentDiv = document.querySelector('div:not([style*="display:none"])');
-    if (currentDiv) {
-        currentDiv.style.display = 'none';
-    }
-    document.getElementById(nextId).style.display = 'block';
-}
+$('.top-slide').slick({
+    autoplay:true,
+    infinite: true,
+    speed: 4000,
+    arrows: false,
+    dots: false,
+    fade: true,
+    autoplaySpeed: 500 
+});
 
 
-function nextQuestion2(nextId) {
-    const currentDiv = document.querySelector('div:not([style*="display:none"])');
-    if (currentDiv) {
-        currentDiv.style.display = 'none';
-    }
-    document.getElementById(nextId).style.display = 'block';
+const imge = document.querySelectorAll("imge");
+const navContainer = document.querySelector(".nav-container");
+const totalImages = images.length;
+let imageIndex = 0;
+let interval;
+
+for (let i = 0; i < totalImages; i++) {
+  const button = document.createElement("button");
+  button.classList.add("nav-btn");
+  navContainer.appendChild(button);
 }
 
-function nextQuestion3(nextId) {
-    const currentDiv = document.querySelector('div:not([style*="display:none"])');
-    if (currentDiv) {
-        currentDiv.style.display = 'none';
-    }
-    document.getElementById(nextId).style.display = 'block';
+const buttons = document.querySelectorAll(".nav-btn");
+
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    imageIndex = index;
+    updateSlider();
+    resetInterval();
+  });
+});
+
+function updateSlider() {
+  imge.forEach((imge) => {
+    imge.classList.remove("imge-active");
+  });
+  buttons.forEach((button) => {
+    button.classList.remove("btn-active");
+  });
+  imge[imageIndex].classList.add("imge-active");
+  buttons[imageIndex].classList.add("btn-active");
 }
+
+function nextImage() {
+  imageIndex++;
+  if (imageIndex > totalImages - 1) {
+    imageIndex = 0;
+  }
+  updateSlider();
+}
+
+function autoPlay() {
+  interval = setInterval(nextImage, 3000);
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  autoPlay();
+}
+
+updateSlider();
+autoPlay();
+
+function btn() {
+    alert ("予約サイトに移動します。");
+  }
+    
