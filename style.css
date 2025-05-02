@@ -1,0 +1,152 @@
+@import "utf-8";
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+#top {
+    position: relative;
+}
+
+#top img {
+    width: 100%;
+    max-height: 900px;
+}
+
+#top-reserv button{
+    z-index: 1000;
+
+    position: absolute;
+    top: 40px;
+    left: 30px;
+
+    font-size: 30px;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    border-radius: 10px;
+    border: 0;
+
+    padding: 30px 5px 30px 0px;
+}
+
+
+#top .top-info {
+    z-index: 1000;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#top .top-info ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+#top .top-info ul li {
+    font-size: 15px;
+}
+
+#top .top-info ul .top-info-number {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+
+#top .top-menu ul{
+    z-index: 1000;
+
+    position: absolute;
+    bottom: 50px;
+    right: 5%;
+    writing-mode: vertical-rl;
+    list-style: none;
+}
+
+#top .top-menu ul li {
+    margin-right: 20px;
+    font-size: 25px;
+
+    text-shadow: 
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000;
+}
+
+#top .top-logo {
+    position: absolute;
+    top: 140px;
+    left: 35%;
+    width: 30%;
+    z-index: 1000;
+}
+
+#top .top-logo p {
+    font-size: 15px;
+    color: white;
+} 
+
+
+/* 以下コンセプト領域 */
+
+#concept {
+    height: 1000px;
+    width: 1200px;
+
+    margin: 0 auto;
+}
+
+#concept .concept-catchphrase {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#concept .concept-catchphrase h1 {
+    font-size: 50px;
+}
+
+#concept .concept-catchphrase p {
+    font-size: 20px;
+}
+
+#concept .concept-contents dl dt img {
+    width: 500px;
+    margin: 50px;
+}
+
+#concept .concept-contents .concept-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#concept .concept-contents .concept-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#concept .concept-contents .concept-left dd {
+    width: 500px;
+    justify-content: center;
+}
+
+#concept .concept-contents .concept-right dd{
+    width: 500px;
+    justify-content: center;
+}
