@@ -1,97 +1,281 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+
 <head>
-    <title>自己紹介サイト</title>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焼肉 -結-</title>
 </head>
 
 <body>
-    <h3>自己紹介</h3>
-    <img src="profile.jpg" alt="プロフィール写真">
-    <p>私の名前はシカです。</p>
-    <p>沖縄出身で、現在は西原に住んでいます。</p>
-    <h2>スキル</h2>
-    <ul>
-        <li>HTML..書き書き中</li>
-        <li>CSS..未開発</li>
-        <li>Javascript..現在触り中</li>
-    </ul>
-    <h2>趣味</h2>
-    <ol>
-        <li>没頭</li>
-        <li>寝る</li>
-        <li>旅行</li>
-        <li>ゲーム</li>
-    </ol>
 
-    <form><input type="button" value="日時表示" onClick="messagee()"></form>
-    <span id="view_time"></span>
+    <div id="top">
 
-    <h1>おうちdeカクテル</h1>
-    <div1>
-        <p id="change_text">合わせてみよう</p>
-        <button onclick="osake()">お酒</button>
-        <button onclick="jusu()">飲み物</button>
-    </div>
-    <p></p>
-<i id="demo2">案山子
-<button type="button" onclick='document.getElementById("demo2").innerHTML = "不正解"'>選ぶ</button></i>
+        <div id="top-reserv">
+            <button onclick="btn()">ご予約はこちら</button>
+        </div>
 
-<i id="demo">ｼｬﾝﾃﾞｨｰｶﾞﾌ
-<button type="button" onclick='document.getElementById("demo").innerHTML = "正解"'>選ぶ</button></i>
+        <div class="top-info">
+            <ul>
+                <li>ご予約・お問い合わせ</li>
+                <li class="top-info-number">0120-1234-5678</li>
+            </ul>
+        </div>
 
-<i id="demo3">梅酒
-<button type="button" onclick='document.getElementById("demo3").innerHTML = "不正解"'>選ぶ</button></i>
-    <p></p>
-     <hr>
-    <meta charset="UTF-8">
+        <!--
+        <div class="top-menu">
+            <ul>
+                <li>結のこだわり</li>
+                <li>おすすめメニュー</li>
+                <li>店舗情報</li>
+            </ul>
+        </div>
+        -->
 
-    <titlel>カクテルクイズ</title>
-    <div id="unk1">
-        <p>レッド・アイ</p>
-        ビールと合わせるのは・・・
-        <p id="uk1">
-        <button type="button" onclick='document.getElementById("uk1").innerHTML = "正解"'>トマトジュース</button>
-        <button type="button" onclick='document.getElementById("uk1").innerHTML = "不正解"'>レモンジュース</button>
-        <button type="button" onclick='document.getElementById("uk1").innerHTML = "不正解"'>オレンジジュース</button>
-        <p>
-        <button type="button" onclick ='nextQuestion("unk2")'>次へ</button>
+
+        <div class="top-logo">
+            <img src="image/logo.png" alt="焼肉 -結-">
+        </div>
+
+        <div class="top-haikei">
+            <ul class="top-slide">
+                <li><img src="image/top02.jpg" alt="" srcset=""></li>
+                <li><img src="image/top03.jpg" alt=""></li>
+                <li><img src="image/top05.jpg" alt=""></li>
+            </ul>
+        </div>
+
     </div>
 
-    <div id="unk2" style="display:none;">
-        <p>ダーク＆ストーミー</p>
-        ラム酒と合わせるのは・・・
-        <p id="uk2">
-        <button type="button" onclick='document.getElementById("uk2").innerHTML = "不正解"'>コーラ</button>
-        <button type="button" onclick='document.getElementById("uk2").innerHTML = "不正解"'>トマトジュース</button>
-        <button type="button" onclick='document.getElementById("uk2").innerHTML = "正解"'>ジンジャービール</button>
-        <p>
-        <button type="button" onclick='nextQuestion2("unk3")'>次へ</button>
-    </div>
+    <div id="concept">
 
-    <div id="unk3" style="display:none;">
-        <p>ジン・リッキー</p>
-        ジンと合わせるのは・・・
-        <p id="uk3">
-        <button type="button" onclick='document.getElementById("uk3").innerHTML = "不正解"'>トニックウォーター</button>
-        <button type="button" onclick='document.getElementById("uk3").innerHTML = "不正解"'>ビール</button>
-        <button type="button" onclick='document.getElementById("uk3").innerHTML = "正解"'>ソーダ</button>
-        <p>
-        <button type="button" onclick='nextQuestion3("unk4")'>次へ</button>
-    </div>
+        <div class="concept-catchphrase">
+            <h1>「何もしないでいい」</h1>
+            <p>フルアテンドの和牛料理店。</p>
+        </div>
 
-    <div id="unk4" style="display:none;">
-        <p>緑茶ハイ</p>
-        緑茶と混ぜるのは・・・
-        <p id="uk4">
-        <button type="button" onclick='document.getElementById("uk4").innerHTML = "不正解"'>ハイボール</button>
-        <button type="button" onclick='document.getElementById("uk4").innerHTML = "正解"'>甲類焼酎</button>
-        <button type="button" onclick='document.getElementById("uk4").innerHTML = "不正解"'>テンション</button>
-        <p>終了</p>
-    </div>
 
-    <script src="script.js"></script>
-</body2>
+
+        <div class="concept-contents">
+
+
+            <dl class="concept-left">
+                <dt><img src="image/concept01.jpg" alt=""></dt>
+                <dd>
+                    <h1>和牛に向き合う</h1>
+                    <p>・国産黒毛和牛の厳選した部位5種類を堪能していただきます。
+                        それぞれの部位に合わせた焼き方、食べ方にこだわり、
+                        最大限引き出された美味しさと新しい楽しみ方に出会う機会を提供します。
+                    </p>
+                </dd>
+            </dl>
+
+            <dl class="concept-right">
+                <dt>
+                    <img src="image/concept04.jpg" alt="">
+                </dt>
+                <dd>
+                    <h1>一口にこだわる</h1>
+                    <p>・フルアテンドだからこそ、目の前の一口に集中していただけます。
+                        こだわり抜いた一口を存分に味わってください。
+                    </p>
+                </dd>
+                </p>
+                </dd>
+            </dl>
+
+            <dl class="concept-left">
+                <dt>
+                    <img src="image/concept02.jpg" alt="">
+                </dt>
+                <dd>
+                    <h1>お客様に何もさせない</h1>
+                    <p>・来店後お好きなドリンクを選んでいただくだけ。
+                        コース料理となっており、丁寧に仕上げて提供します。
+                        料理のとりわけやお肉の焼き付けなども必要ありません、
+                        フルアテンドでおもてなしさせていただきます。
+                    </p>
+                </dd>
+            </dl>
+
+
+            </divconcept-contents>
+
+
+
+
+
+        </div>
+
+
+        <div id="contents" class="bg1">
+            　　　　　　   <h2>メニュー・コース</h2>
+            <!--以下メニュー-->
+           
+            <section1>
+            <div style="display: flex; align-items: center;">
+                <div class="slideshow-container" style="text-align: left; flex: 1;">
+                    <div class="mySlides fade">
+                        <img src="images/sankaku.png" alt="三角" style="width:90%; height:50%;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/wagyumenchikatsu.jpg" alt="和牛串" style="width:80%; height:50%;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/shato-burian.jpg" alt="ハラミ" style="width:80%; height:50%;">
+                    </div>
+                </div>
+                <box1 style="flex: 1; padding-left: 20px;">
+                    <figcaption class="w50 fr" style="text-align: left;">
+                        <strong style="color: red; font-size: 55px; font-family:Times New Roman">メニュー</strong>
+                    
+                            <li>三角</li>
+                            <li>和牛串</li>
+                            <li>和牛メンチカツ</li>
+                            <li>ハラミ</li>
+                            <li>イチボ</li>
+                            <li>リブロース</li>
+                            <li>ボロネーゼ</li>
+                            <li>牛丼</li>
+                            etc...
+                    
+                   
+                    </figcaption>
+                </box1>
+            </div>
+    
+            <div class="scrollme box1">
+                
+            <div class="slideshow-container" style="text-align: left;">
+                <div class="mySlides fade">
+                    <img src="images/sankaku.png" alt="三角" style="width:40%; height:50%;">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/wagyumenchikatsu.jpg" alt="和牛串" style="width:40%; height:50%;">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/shato-burian.jpg" alt="ハラミ" style="width:40%; height:50%;">
+                </div>
+                <figcaption class="w50 fr" style="text-align: center;">
+                
+                </figcaption>
+            </div>
+
+
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 3000); // Change image every 3 seconds
+                }
+            </script>
+            </figure>
+           
+            </figcaption>
+            </div>
+            
+            <div class="scrollme box1">
+            <figure class="w50 fr">
+            <img src="images/course.jpg" alt="コース画像"></figure>
+            <figcaption class="w50 fl c"><strong style="color: red; font-size: 60px; font-family:Times New Roman">コース</strong><br>
+                <ul>
+                ・サンクロゼコース　(10品)<br>
+                お一人様10,000円　(税サ込　ドリンク別) <br><br>
+                ・サンクロゼショートコース　(7品)<br>
+                お一人様7,000円　(税サ込　ドリンク別)</figcaption>
+                </ul>
+            </div>
+        <!--
+            <button onclick="yoyaku()">ご予約はこちら</button>
+                <script src="scripts.js"> </script>
+        -->
+            </section1>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #000;
+                    color: #fff;
+                }
+                h1 {
+                    text-align: center;
+                    margin: 20px 0;
+                    font-size: 28px;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 20px auto;
+                    background-color: #610707;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .content {
+                    flex: 1;
+                    padding: 20px;
+                    margin-bottom: 100px;
+                }
+                .map {
+                    flex: 1;
+                    padding: 0px;
+                }
+                iframe {
+                    width: 100vw;  /* ← "vw"はブラウザの横幅100%という意味 */
+                     height: 400px;
+                    border: 0;
+                    min-height: 300px;
+                }
+                p {
+                    font-size: 18px; 
+                }
+            </style>
+        <body>
+        <h1>アクセス・店舗情報</h1>
+        <div class="container">
+            <div class="content">
+                <h1>肉屋サンクロゼ</h1>
+                <p>住　　所：　沖縄県島尻郡南風原町兼城128エンネグランデ2階</p>
+                <p>電話番号：　090-5153-2251</p>
+                <p>営業時間：　18:00～24:00 (L.O. 23:00)</p>
+                <p>定休日　：　不定休（月曜のみ前日までに予約必須）</p>
+                <p>座席数　：　14席（カウンター8席・座敷個室席1室（最大6名））</p>
+                <p>駐車場　：　店舗1階無料駐車場有（4台）</p>
+            </div>
+            
+            <div class="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.8321149574317!2d127.7270653!3d26.1948226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56fa5a2e13c43%3A0xb7c773aa1109f95e!2z5Yqg5bCP44G_44Gq44GE44G-44KL!5e0!3m2!1sja!2sjp!4v1713608700000!5m2!1sja!2sjp" 
+                width="00"
+                height="500"
+                loading="lazy">
+                </iframe>
+            </div>
+        </div>
+</body>
+
+<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<!-- slickのJavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="script.js"></script>
 
 </html>
