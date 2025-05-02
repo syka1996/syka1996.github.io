@@ -1,31 +1,105 @@
-body {
-    font-family: cursive;
-    text-align: center;
-    background-color: blanchedalmond;
-}
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+@charset "utf-8";
+
+body {line-height: 2;	}
+section1 {font-size:25px;} 
+
+ul { font-family: "Times New Roman";}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+iframe {width: 100%;}
+
+
+
+/*メニュー・コース見出しデザイン*/
+#contents h2 {
+	 font-family:"ＭＳ Ｐゴシック","MS PGothic",sans-serif,"Times New Roman";	/*フォント指定*/
+	 font-size: 60px;	/*文字サイズ*/
+	 margin-top: 50px;
+	 margin-bottom: 30px;	/*下に空ける余白*/
+	 text-align: center;		/*文字をセンタリング*/
+	 letter-spacing: 0.2em;	/*文字間隔を広くとる設定*/
+	 color: #fff;			/*文字色*/
+		position: relative;
+		padding: 0.25em 1em;
+		border-top: solid 2px white;
+		border-bottom: solid 2px white;
+	
+	  }
+	  h2:before, h2:after {
+		content: '';
+		position: absolute;
+		top: -15px;
+		width: 2px;
+		height: -webkit-calc(100% + 30px);
+		height: calc(100% + 30px);
+		background-color: white;
+	  }
+	  h2:before {
+		left: 15px;
+	  }
+	  h2:after {
+		right: 15px;	
 }
 
-ul,
-ol {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
+/*各ボックスの設定*/
+#contents .box2 {
+	padding: 3%;	/*ボックス内の余白*/
 }
 
-h3,
-h2 {
-    margin-top: 30px;
-    background-color: beige;
-    font-size: 1.2em;
+/*ボックス内のh3タグ内のspanタグ*/
+#contents .box2 h3 span {
+	background: #000;		/*背景色*/
+	padding-right: 30px;	/*右側に空ける余白*/
 }
-button {
-    padding: 10px 20px;
-    border: solid 2px #ddd;
-    border-radius: 10px;
+
+/*box1（トップページの「私たちのこだわり食材」以下の４つのブロック）*/
+/*ボックス１個あたりの設定*/
+.box1 {
+	overflow: hidden;
+	margin-bottom: 30px;
 }
+/*説明文*/
+.box1 figcaption.w50 {
+	width: 47%;
+}
+/*説明文内のstrongタグ*/
+.box1 figcaption strong {
+	display: block;
+	font-weight: normal;
+	font-size: 50px;	/*文字サイズ*/
+	color: #c73302;		/*文字色*/
+}
+
+/*その他*/
+.look {background: #333;padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.p0 {padding:0 !important;}
+.clear {clear: both;}
+.color1, .color1 a {color: #c73302 !important;}
+.pr {font-size: 10px;}
+.wl {width: 96%;}
+.ws {width: 50%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+.w50 {overflow: hidden;width: 50%;}
+.fl {float: left;}
+.fr {float: right;}
+.big1 {font-size: 50px;}
+.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
+.sh {display: none;}
+
+.area {
+    scroll-snap-align: start;
+    height: 100vh;
+  }
+
+
+  .strong {
+	font-weight: bold;
+	font-size: 30px;
+	color: #c73302;
+  }
